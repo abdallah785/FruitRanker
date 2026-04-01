@@ -75,21 +75,7 @@ const App = {
       '</div>' +
     '</section>' +
     FruitDay.render() +
-    '<section class="fruit-gallery">' +
-      '<h2 class="section-title">🍇 Nos Fruits</h2>' +
-      '<div class="fruit-grid">' +
-        FRUITS.map(function(f) {
-          return '<div class="fruit-card">' +
-            '<img src="' + f.image + '" alt="' + f.name + '" class="fruit-card-img" onerror="this.style.display=\'none\'">' +
-            '<div class="fruit-card-body">' +
-              '<h4>' + f.emoji + ' ' + f.name + '</h4>' +
-              '<span class="fruit-tag">' + f.category + '</span>' +
-            '</div>' +
-          '</div>';
-        }).join('') +
-      '</div>' +
-    '</section>' +
-    '<section class="stats-section">' +
+        '<section class="stats-section">' +
       '<h2 class="section-title">📊 Statistiques</h2>' +
       '<div class="stats-grid">' +
         '<div class="stat-card">' +
@@ -112,7 +98,7 @@ const App = {
     return '<section class="page-section">' +
       '<div class="page-header">' +
         '<h1>🏆 Classement Top 10</h1>' +
-        '<p>Glisse et depose les fruits pour creer ton classement personnel!</p>' +
+        '<p>Choisis et classe tes fruits preferes!</p>' +
         (!Auth.isPremium() ?
           '<p class="free-notice">🔒 Mode gratuit : places 4 a 10 uniquement. <a href="#premium" class="accent-link">Passe en Premium</a> pour le Top 3!</p>' :
           '<p class="premium-notice">🌟 Mode Premium : classement complet!</p>') +
