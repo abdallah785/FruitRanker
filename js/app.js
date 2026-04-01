@@ -49,7 +49,7 @@ const App = {
     var main = document.getElementById('main-content');
 
     switch(this.currentPage) {
-      case 'home': main.innerHTML = this.renderHome(); break;
+      case 'home': main.innerHTML = this.renderHome(); Ranking.loadGlobalVotes(); break;
       case 'ranking': main.innerHTML = this.renderRanking(); Ranking.init(); break;
       case 'tournament': main.innerHTML = this.renderTournament(); Tournament.init(); break;
       case 'premium': main.innerHTML = this.renderPremium(); break;
