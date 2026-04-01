@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FruitRanker - Classe tes fruits préférés!</title>
+  <meta name="description" content="Classe, compare et affronte tes fruits préférés en tournoi! Découvre le fruit champion.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%2280%22 font-size=%2280%22>🍎</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Outfit:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- NAV -->
+  <nav class="navbar">
+    <div class="nav-brand" onclick="App.navigate('home')">
+      <span class="brand-icon">🍎</span>
+      <span class="brand-text">Fruit<span class="accent">Ranker</span></span>
+    </div>
+    <div id="nav-links" class="nav-links"></div>
+    <div id="auth-area" class="auth-area"></div>
+  </nav>
+
+  <!-- MAIN -->
+  <main id="main-content" class="main-content"></main>
+
+  <!-- PAYWALL MODAL -->
+  <div id="paywall-modal" class="modal-overlay">
+    <div class="modal-card">
+      <button class="modal-close" onclick="Premium.hidePaywall()">✕</button>
+      <div class="modal-icon">🔒</div>
+      <h2>Fonctionnalité Premium</h2>
+      <p id="paywall-message">Passe en Premium pour débloquer!</p>
+      <a href="" id="paywall-stripe-link" class="btn btn-premium btn-lg" onclick="this.href=CONFIG.STRIPE_PAYMENT_LINK" target="_blank">
+        Passer Premium - <span class="font-mono">4,99€/mois</span>
+      </a>
+      <p class="modal-note">Paiement sécurisé via Stripe</p>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>🍎 FruitRanker &copy; 2025 - Fait avec passion pour les fruits</p>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script src="js/config.js"></script>
+  <script src="js/fruits.js"></script>
+  <script src="js/airtable.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/premium.js"></script>
+  <script src="js/ranking.js"></script>
+  <script src="js/tournament.js"></script>
+  <script src="js/chatbot.js"></script>
+  <script src="js/fruitday.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
